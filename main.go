@@ -16,6 +16,10 @@ func main() {
 		}
 	}()
 
-	parser.Parser(file)
+	var targetFolder = "resources/target"
+	os.RemoveAll(targetFolder)
 
+	parser.Parser(file, "resources/", targetFolder)
+
+	// parser.ConvertRestMp3("resources/iPod_Control/Music/")
 }
